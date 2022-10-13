@@ -1,0 +1,21 @@
+[user]
+	name = hoangnd17
+	email = dumuc2010@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = smerge
+[diff]
+	tool = sublimerge
+[difftool]
+	prompt = false
+[difftool "sublimerge"]
+	cmd = smerge -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
+	trustExitCode = true
+[init]
+    defaultBranch = main
+[credential]
+	helper = osxkeychain
