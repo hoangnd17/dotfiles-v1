@@ -21,6 +21,7 @@ brew 'svn' # Needed to install fonts
 brew 'swiftformat'
 brew 'swiftlint'
 brew 'robotsandpencils/made/xcodes'
+brew 'cocoapods'
 
 # Development
 brew 'node'
