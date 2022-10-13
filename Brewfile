@@ -20,13 +20,7 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
 brew 'swiftformat'
 brew 'swiftlint'
-
-# Spatie Medialibrary
-brew 'jpegoptim'
-brew 'optipng'
-brew 'pngquant'
-brew 'svgo'
-brew 'gifsicle'
+brew 'robotsandpencils/made/xcodes'
 
 # Development
 brew 'node'
@@ -73,3 +67,4 @@ cask 'font-source-serif-pro'
 mas 'Giphy Capture', id: 668208984
 mas 'Spark', id: 1176895641
 mas 'InjectionIII', id: 1380446739
+mas 'XCFormat', id: 1165321484
