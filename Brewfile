@@ -19,6 +19,7 @@ brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
 brew 'swiftformat'
+brew 'swiftlint'
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -53,6 +54,7 @@ cask 'runjs'
 cask 'deluge'
 cask 'rectangle'
 cask 'sublime-merge'
+cask 'google-chat'
 
 # Quicklook
 cask 'qlmarkdown'
