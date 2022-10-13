@@ -26,6 +26,25 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file $DOTFILES/Brewfile
 
+# Setup python environment
+if test $(which pyenv); then
+  eval "$(pyenv init -)";
+fi
+
+if test $(pyenv-virtualenv-init); then
+   eval "$(pyenv virtualenv-init -)"; 
+fi
+
+# Setup node environment
+if test $(which nvm); then
+  eval "$(nvm install --lts)";
+fi
+
+# Setup ruby environment
+if test $(which rbenv); then
+  eval "$(rbenv init -)";
+fi
+
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 

@@ -22,11 +22,12 @@ brew 'swiftformat'
 brew 'swiftlint'
 brew 'robotsandpencils/made/xcodes'
 brew 'cocoapods'
-
-# Development
-brew 'node'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+brew 'nvm'
 brew 'redis'
 brew 'yarn'
+brew 'rbenv'
 
 # Apps
 cask 'caffeine'
