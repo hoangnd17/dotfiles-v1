@@ -9,10 +9,8 @@ fi
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
+   echo "installing brew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
@@ -33,6 +31,7 @@ fi
 
 if test $(pyenv-virtualenv-init); then
    eval "$(pyenv virtualenv-init -)"; 
+   eval "$(pyenv install 3.9)";
 fi
 
 # Setup node environment
@@ -51,8 +50,12 @@ chsh -s $(which zsh)
 # Symlink the Mackup config file to the home directory
 ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 
-# Symlink Sublime merge
+# Other symlinks
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" usr/local/bin/smerge
+ln -s $HOME/$DOTFILES/.lldbinit ~/.lldbinit
+
+rm -rf $HOME/.gitconfig
+ln -s $HOME/$DOTFILES/.gitconfig ~/.gitconfig
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos
