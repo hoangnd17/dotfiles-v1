@@ -26,6 +26,7 @@ brew 'nvm'
 brew 'redis'
 brew 'yarn'
 brew 'rbenv'
+brew 'chisel'
 
 # Apps
 cask 'caffeine'
