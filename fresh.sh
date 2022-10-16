@@ -54,8 +54,5 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" usr/local/bin/smerge
 ln -s $HOME/$DOTFILES/.lldbinit ~/.lldbinit
 
-rm -rf $HOME/.gitconfig
-ln -s $HOME/$DOTFILES/.gitconfig ~/.gitconfig
-
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos
