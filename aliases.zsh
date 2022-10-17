@@ -33,6 +33,7 @@ alias pull="git pull"
 alias push="git push"
 alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
+alias apply="git stash apply"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
 
