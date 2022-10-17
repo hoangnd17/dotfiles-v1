@@ -18,7 +18,7 @@ alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 alias watch="npm run watch"
 
 # Git
-alias gst="git status"
+alias gs="git status"
 alias gb="git branch"
 alias gc="git checkout"
 alias gl="git log --oneline --decorate --color"
@@ -28,9 +28,15 @@ alias diff="git diff"
 alias force="git push --force"
 alias nuke="git clean -df && git reset --hard"
 alias pop="git stash pop"
+alias clone="git clone --recursive"
 alias pull="git pull"
 alias push="git push"
 alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+
+#mackup: https://github.com/lra/mackup
+alias backup="mackup backup"
+alias restore="mackup restore"
+

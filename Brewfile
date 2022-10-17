@@ -50,6 +50,7 @@ cask 'rectangle'
 cask 'sublime-merge'
 cask 'google-chat'
 cask 'microsoft-teams'
+cask 'fig'
 
 # Quicklook
 cask 'qlmarkdown'
