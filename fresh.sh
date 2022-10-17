@@ -46,6 +46,8 @@ fi
 # Setup ruby environment
 if test $(which rbenv); then
   eval "$(rbenv init -)";
+  eval "$(ruby install 3.1.2)";
+  eval "$(ruby global 3.1.2)";
 fi
 
 # Make ZSH the default shell environment
