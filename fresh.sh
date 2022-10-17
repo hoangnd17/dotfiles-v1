@@ -11,6 +11,9 @@ fi
 if test ! $(which brew); then
    echo "installing brew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/user/.zprofile
+   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/user/.zprofile
+   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
@@ -27,11 +30,12 @@ brew bundle --file $DOTFILES/Brewfile
 # Setup python environment
 if test $(which pyenv); then
   eval "$(pyenv init -)";
+  eval "$(pyenv install 3.9.14)";
+  eval "$(pyenv global 3.9.14)";
 fi
 
 if test $(pyenv-virtualenv-init); then
-   eval "$(pyenv virtualenv-init -)"; 
-   eval "$(pyenv install 3.9)";
+   eval "$(pyenv virtualenv-init -)";
 fi
 
 # Setup node environment
@@ -53,6 +57,10 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 # Other symlinks
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" usr/local/bin/smerge
 ln -s $HOME/$DOTFILES/.lldbinit ~/.lldbinit
+
+# Copy
+cp $DOTFILES/.gitconfig ~/
+cp $DOTFILES/.gitignore_global ~/.gitignore
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos
