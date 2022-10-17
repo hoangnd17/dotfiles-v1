@@ -34,7 +34,7 @@ if test $(which pyenv); then
   eval "$(pyenv global 3.9.14)";
 fi
 
-if test $(pyenv-virtualenv-init); then
+if test $(pyenv-virtualenv); then
    eval "$(pyenv virtualenv-init -)";
 fi
 
@@ -57,12 +57,12 @@ chsh -s $(which zsh)
 ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 
 # Other symlinks
-ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" usr/local/bin/smerge
+ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
 ln -s $HOME/$DOTFILES/.lldbinit ~/.lldbinit
 
 # Copy
 cp $DOTFILES/.gitconfig ~/
-cp $DOTFILES/.gitignore_global ~/.gitignore
+cp $DOTFILES/.gitignore_global ~/
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos

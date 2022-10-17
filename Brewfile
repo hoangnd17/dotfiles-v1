@@ -69,4 +69,3 @@ cask 'font-source-serif-pro'
 mas 'Giphy Capture', id: 668208984
 mas 'Spark', id: 1176895641
 mas 'InjectionIII', id: 1380446739
-mas 'XCFormat', id: 1165321484
