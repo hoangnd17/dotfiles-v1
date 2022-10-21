@@ -26,6 +26,7 @@ brew 'redis'
 brew 'yarn'
 brew 'rbenv'
 brew 'chisel'
+brew 'aria2'
 
 # Apps
 cask 'caffeine'
