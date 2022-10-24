@@ -1,0 +1,3 @@
+#!/bin/bash
+
+open -na "AppCode.app" --args "$@"
