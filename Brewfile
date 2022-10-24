@@ -51,6 +51,7 @@ cask 'sublime-merge'
 cask 'google-chat'
 cask 'microsoft-teams'
 cask 'fig'
+cask 'appcode'
 
 # Quicklook
 cask 'qlmarkdown'
