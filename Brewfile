@@ -49,9 +49,9 @@ cask 'deluge'
 cask 'rectangle'
 cask 'sublime-merge'
 cask 'google-chat'
-cask 'microsoft-teams'
 cask 'fig'
 cask 'appcode'
+cask 'postman'
 
 # Quicklook
 cask 'qlmarkdown'
