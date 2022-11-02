@@ -52,6 +52,7 @@ cask 'google-chat'
 cask 'fig'
 cask 'appcode'
 cask 'postman'
+cask 'kap'
 
 # Quicklook
 cask 'qlmarkdown'
