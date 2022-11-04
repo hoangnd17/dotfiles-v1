@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "Installing Xcode Extensions"
+brew install "$DOTFILES/casks/multiliner.rb"
+mas install 1165321484
+
+echo "Installing Xcode Utilities"
+brew install "$DOTFILES/casks/jsontomodel.rb"
+
 set -euo pipefail
 
 VERSION=0.3.0
