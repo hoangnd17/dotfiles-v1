@@ -7,8 +7,10 @@ mas install 1165321484
 echo "Installing Xcode Utilities"
 brew install "$DOTFILES/casks/jsontomodel.rb"
 
-set -euo pipefail
 
+echo "Installing Xcode Snippets"
+
+set -euo pipefail
 VERSION=0.3.0
 EXTENSION=codesnippet
 NAME="XcodeSwiftSnippets-${VERSION}"
