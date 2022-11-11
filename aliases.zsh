@@ -42,3 +42,5 @@ alias wip="commit wip"
 alias backup="mackup backup"
 alias restore="mackup restore"
 
+#xcode
+alias deeplink="xcrun simctl openurl booted"
