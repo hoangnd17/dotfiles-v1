@@ -27,6 +27,7 @@ brew 'yarn'
 brew 'rbenv'
 brew 'chisel'
 brew 'aria2'
+brew 'php'
 
 # Apps
 cask 'caffeine'
