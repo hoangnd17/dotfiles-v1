@@ -38,6 +38,7 @@ alias gsl="git stash list"
 alias apply="git stash apply"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+alias xc="xed ."
 
 #mackup: https://github.com/lra/mackup
 alias backup="mackup backup"
