@@ -40,7 +40,7 @@ alias apply="git stash apply"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias xc="xed ."
-alias xflush="xcrun simctl shutdown all && xcrun simctl erase all && xcode_cleanup"
+alias xflush="xcrun simctl shutdown all && xcrun simctl erase all"
 
 #mackup: https://github.com/lra/mackup
 alias backup="mackup backup"
