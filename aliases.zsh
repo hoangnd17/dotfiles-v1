@@ -41,6 +41,7 @@ alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias xc="xed ."
 alias xflush="xcrun simctl shutdown all && xcrun simctl erase all"
+alias xclean="xcode_cleanup"
 
 #mackup: https://github.com/lra/mackup
 alias backup="mackup backup"
