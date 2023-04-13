@@ -54,6 +54,7 @@ cask 'fig'
 cask 'appcode'
 cask 'postman'
 cask 'kap'
+cask 'shottr'
 
 # Quicklook
 cask 'qlmarkdown'

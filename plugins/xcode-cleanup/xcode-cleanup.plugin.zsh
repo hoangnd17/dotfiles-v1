@@ -8,7 +8,6 @@ function xcode_cleanup {
   xcode_cleanup_simulator_log
   xcode_cleanup_simulator
   cleanup_tmp_folder
-  cleanup_spaces_caused_by_simulators
 
   echo "Xcode cleanup done."
   echo
@@ -100,13 +99,6 @@ function xcode_cleanup_simulator() {
 function cleanup_tmp_folder() {
   echo "Cleanup private/tmp folder"
   rm -R /private/tmp
-  echo
-  return 0
-}
-
-function cleanup_spaces_caused_by_simulators() {
-  echo "Cleanup spaces caused by re-running simulator over times"
-  sudo rm -R /Library/Developer/CoreSimulator
   echo
   return 0
 }
