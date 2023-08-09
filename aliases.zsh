@@ -42,6 +42,12 @@ alias wip="commit wip"
 alias xc="xed ."
 alias xflush="xcrun simctl shutdown all && xcrun simctl erase all"
 alias xclean="xcode_cleanup"
+alias gpush='git push origin $(git_current_branch)'
+alias gpull='git pull origin $(git_current_branch)'
+
+git_current_branch() {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
 
 #mackup: https://github.com/lra/mackup
 alias backup="mackup backup"

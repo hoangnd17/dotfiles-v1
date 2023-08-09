@@ -19,3 +19,5 @@
     defaultBranch = main
 [credential]
 	helper = osxkeychain
+[push]
+	autoSetupRemote = true
