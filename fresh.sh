@@ -11,7 +11,6 @@ fi
 if test ! $(which brew); then
    echo "installing brew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/user/.zprofile
    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/user/.zprofile
    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
@@ -25,7 +24,7 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file $DOTFILES/Brewfile
+brew bundle --file ./Brewfile
 
 # Setup python environment
 if test $(which pyenv); then
@@ -61,9 +60,9 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 
 # Other symlinks
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
-ln -s $DOTFILES/.lldbinit ~/.lldbinit
-ln -s $DOTFILES/.gitconfig ~/.gitconfig
-ln -s $DOTFILES/.gitignore_global ~/.gitignore_global
+ln -s ./.lldbinit ~/.lldbinit
+ln -s ./.gitconfig ~/.gitconfig
+ln -s ./.gitignore_global ~/.gitignore_global
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source $DOTFILES/.macos
+source /.macos
