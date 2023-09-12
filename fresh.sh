@@ -56,7 +56,7 @@ fi
 chsh -s $(which zsh)
 
 # Symlink the Mackup config file to the home directory
-ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
+ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
 # Other symlinks
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge

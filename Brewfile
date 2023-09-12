@@ -18,7 +18,6 @@ brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
 brew 'swiftformat'
-brew 'robotsandpencils/made/xcodes'
 brew 'cocoapods'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
@@ -70,7 +69,6 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-mas 'Giphy Capture', id: 668208984
 mas 'Spark', id: 1176895641
 mas 'InjectionIII', id: 1380446739
 mas 'A Companion for SwiftUI', id: 1485436674
