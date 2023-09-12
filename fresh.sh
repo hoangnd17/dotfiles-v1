@@ -26,6 +26,9 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
+# Create a projects directories
+mkdir $HOME/Workplace
+
 # Setup python environment
 if test ! $(which pyenv); then
   eval "$(pyenv init -)";
