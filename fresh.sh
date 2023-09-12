@@ -27,18 +27,18 @@ brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
 # Setup python environment
-if ! command -v pyenv >/dev/null 2>&1; then
+if test ! $(which pyenv); then
   eval "$(pyenv init -)";
   eval "$(pyenv install 3.9.14)";
   eval "$(pyenv global 3.9.14)";
 fi
 
-if ! command -v pyenv-virtualenv >/dev/null 2>&1; then
+if test ! $(which pyenv-virtualenv); then
    eval "$(pyenv virtualenv-init -)";
 fi
 
 # Setup node environment
-if ! command -v nvm >/dev/null 2>&1; then
+if test ! $(which nvm); then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" 
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 

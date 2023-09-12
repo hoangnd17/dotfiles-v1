@@ -19,11 +19,8 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
 brew 'swiftformat'
 brew 'cocoapods'
-brew 'pyenv'
-brew 'pyenv-virtualenv'
 brew 'redis'
 brew 'yarn'
-brew 'rbenv'
 brew 'chisel'
 brew 'aria2'
 brew 'php'
