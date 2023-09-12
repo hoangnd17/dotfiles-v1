@@ -24,6 +24,7 @@ brew 'yarn'
 brew 'chisel'
 brew 'aria2'
 brew 'php'
+brew 'zplug'
 
 # Apps
 cask 'caffeine'

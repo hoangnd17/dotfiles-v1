@@ -84,6 +84,9 @@ plugins=(git zsh-autosuggestions xcode-cleanup reflog)
 
 source $ZSH/oh-my-zsh.sh
 
+# Plugin manager: https://github.com/zplug/zplug
+ zplug "dracula/zsh", as:theme 
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
