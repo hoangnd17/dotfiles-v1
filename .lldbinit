@@ -1,2 +1,3 @@
 # ~/.lldbinit
-command script import /opt/homebrew/opt/chisel/libexec/fbchisellldb.py
+# Import Chisel for LLDB
+command script import /usr/local/opt/chisel/libexec/fbchisellldb.py
