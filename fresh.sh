@@ -27,26 +27,26 @@ brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
 # Setup python environment
-if test $(which pyenv); then
+if test ! $(which pyenv); then
   eval "$(pyenv init -)";
   eval "$(pyenv install 3.9.14)";
   eval "$(pyenv global 3.9.14)";
 fi
 
-if test $(pyenv-virtualenv); then
+if test ! $(pyenv-virtualenv); then
    eval "$(pyenv virtualenv-init -)";
 fi
 
 # Setup node environment
-if test ! $(which nvm); then
-  echo "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash)"
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  eval "$(nvm install --lts)";
+if ! command -v nvm >/dev/null 2>&1; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" 
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+  nvm install --lts
 fi
 
 # Setup ruby environment
-if test $(which rbenv); then
+if test ! $(which rbenv); then
   eval "$(rbenv init -)";
   eval "$(rbenv install 3.1.2)";
   eval "$(rbenv global 3.1.2)";
@@ -65,4 +65,4 @@ ln -s ./.gitconfig ~/.gitconfig
 ln -s ./.gitignore_global ~/.gitignore_global
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source /.macos
+source ./.macos
