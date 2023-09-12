@@ -11,13 +11,13 @@ fi
 if test ! $(which brew); then
    echo "installing brew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/user/.zprofile
+   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /$HOME/.zprofile
    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
-ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -s $(pwd)/.zshrc $HOME/.zshrc
 
 # Update Homebrew recipes
 brew update
@@ -27,13 +27,13 @@ brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
 # Setup python environment
-if test ! $(which pyenv); then
+if ! command -v pyenv >/dev/null 2>&1; then
   eval "$(pyenv init -)";
   eval "$(pyenv install 3.9.14)";
   eval "$(pyenv global 3.9.14)";
 fi
 
-if test ! $(pyenv-virtualenv); then
+if ! command -v pyenv-virtualenv >/dev/null 2>&1; then
    eval "$(pyenv virtualenv-init -)";
 fi
 
@@ -56,13 +56,13 @@ fi
 chsh -s $(which zsh)
 
 # Symlink the Mackup config file to the home directory
-ln -s ./.mackup.cfg $HOME/.mackup.cfg
+ln -s $(pwd)/.mackup.cfg $HOME/.mackup.cfg
 
 # Other symlinks
-ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
-ln -s ./.lldbinit ~/.lldbinit
-ln -s ./.gitconfig ~/.gitconfig
-ln -s ./.gitignore_global ~/.gitignore_global
+sudo ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
+ln -s $(pwd)/.lldbinit ~/.lldbinit
+ln -s $(pwd)/.gitconfig ~/.gitconfig
+ln -s $(pwd)/.gitignore_global ~/.gitignore_global
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
