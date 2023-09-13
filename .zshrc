@@ -18,6 +18,9 @@ export MNML_RPROMPT=('mnml_cwd 20')
 source ~/.zplug/init.zsh
 zplug "dracula/zsh", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-completions", defer:0
+zplug "zsh-users/zsh-autosuggestions", defer:2, on:"zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:3, on:"zsh-users/zsh-autosuggestions"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -96,7 +99,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions xcode-cleanup reflog)
+plugins=(git xcode-cleanup reflog)
 
 source $ZSH/oh-my-zsh.sh
 
