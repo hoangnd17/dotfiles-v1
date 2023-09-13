@@ -4,15 +4,20 @@ echo "Setting up your Mac..."
 
 # Check for Oh My Zsh and install if we don't have it
 if test ! $(which omz); then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
 fi
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
    echo "installing brew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /$HOME/.zprofile
    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Install zplug
+if test ! $(which zplug); then
+  /bin/zsh -c "$(curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh)"
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
@@ -27,7 +32,7 @@ brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
 # Create a projects directories
-mkdir $HOME/Workplace
+mkdir $HOME/Code
 
 # Setup python environment
 if test ! $(which pyenv); then
