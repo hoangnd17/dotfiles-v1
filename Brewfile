@@ -25,6 +25,10 @@ brew 'chisel'
 brew 'aria2'
 brew 'php'
 brew 'zplug'
+brew 'pyenv'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'pyenv-virtualenv'
 
 # Apps
 cask 'caffeine'

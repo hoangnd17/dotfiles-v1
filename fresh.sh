@@ -35,13 +35,13 @@ brew bundle --file ./Brewfile
 mkdir $HOME/Code
 
 # Setup python environment
-if test ! $(which pyenv); then
+if test $(which pyenv); then
   eval "$(pyenv init -)";
   eval "$(pyenv install 3.9.14)";
   eval "$(pyenv global 3.9.14)";
 fi
 
-if test ! $(which pyenv-virtualenv); then
+if test $(which pyenv-virtualenv); then
    eval "$(pyenv virtualenv-init -)";
 fi
 
@@ -54,7 +54,7 @@ if test ! $(which nvm); then
 fi
 
 # Setup ruby environment
-if test ! $(which rbenv); then
+if test $(which rbenv); then
   eval "$(rbenv init -)";
   eval "$(rbenv install 3.1.2)";
   eval "$(rbenv global 3.1.2)";
