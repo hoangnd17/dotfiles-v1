@@ -29,6 +29,8 @@ brew 'pyenv'
 brew 'ruby-build'
 brew 'rbenv'
 brew 'pyenv-virtualenv'
+brew 'xcodesorg/made/xcodes'
+brew 'raindropio'
 
 # Apps
 cask 'caffeine'
