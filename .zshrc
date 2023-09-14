@@ -16,7 +16,6 @@ export MNML_RPROMPT=('mnml_cwd 20')
 
 # Plugin manager: https://github.com/zplug/zplug
 source ~/.zplug/init.zsh
-zplug "dracula/zsh", as:theme
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions", defer:0
 zplug "zsh-users/zsh-autosuggestions", defer:2, on:"zsh-users/zsh-completions"
@@ -37,7 +36,7 @@ zplug load
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="dracula"
+ZSH_THEME="dracula"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
