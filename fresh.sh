@@ -72,5 +72,8 @@ ln -s $(pwd)/.lldbinit ~/.lldbinit
 ln -s $(pwd)/.gitconfig ~/.gitconfig
 ln -s $(pwd)/.gitignore_global ~/.gitignore_global
 
+# Clone
+./clone.sh
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
