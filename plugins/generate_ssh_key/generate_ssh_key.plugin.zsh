@@ -14,7 +14,7 @@ function generate_ssh_key() {
     # https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
     eval "$(ssh-agent -s)"
 
-    echo "Host $user\n HostName github.com\n User git\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/$user\n" | tee -a ~/.ssh/config
+    echo "Host $user.github.com\n HostName github.com\n User git\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/$user\n" | tee -a ~/.ssh/config
 
     ssh-add --apple-use-keychain ~/.ssh/$user
 
