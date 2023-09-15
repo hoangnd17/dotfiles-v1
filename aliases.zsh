@@ -55,3 +55,6 @@ alias restore="mackup restore"
 
 #xcode
 alias deeplink="xcrun simctl openurl booted"
+
+#ssh
+alias myssh="generate_ssh_key"
