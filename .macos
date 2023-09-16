@@ -953,3 +953,6 @@ for app in "Activity Monitor" \
     killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+# Install Rosetta 2 enables a Mac with Apple silicon to use apps built for a Mac with an Intel processor
+softwareupdate --install-rosetta --agree-to-license
