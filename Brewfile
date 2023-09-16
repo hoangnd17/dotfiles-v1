@@ -17,7 +17,6 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
-brew 'swiftformat'
 brew 'cocoapods'
 brew 'redis'
 brew 'yarn'
@@ -58,6 +57,7 @@ cask 'postman'
 cask 'kap'
 cask 'shottr'
 cask 'onedrive'
+cask 'swiftformat-for-xcode'
 
 # Quicklook
 cask 'qlmarkdown'
