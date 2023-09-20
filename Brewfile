@@ -58,10 +58,12 @@ cask 'kap'
 cask 'shottr'
 cask 'onedrive'
 cask 'swiftformat-for-xcode'
+cask 'skype'
 
 # Quicklook
 cask 'qlmarkdown'
 cask 'quicklook-json'
+cask 'provisionql'
 
 # Fonts
 cask 'font-lato'
