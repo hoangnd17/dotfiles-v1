@@ -76,3 +76,4 @@ cask 'font-source-code-pro'
 mas 'Spark', id: 1176895641
 mas 'InjectionIII', id: 1380446739
 mas 'A Companion for SwiftUI', id: 1485436674
+mas 'Free Ruler', id: 1563264206
