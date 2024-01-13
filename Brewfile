@@ -30,6 +30,7 @@ brew 'rbenv'
 brew 'pyenv-virtualenv'
 brew 'xcodesorg/made/xcodes'
 brew 'raindropio'
+brew 'copilot-for-xcode'
 
 # Apps
 cask 'caffeine'
