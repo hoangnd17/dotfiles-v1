@@ -431,6 +431,10 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 
 #  Display Xcode  build times in the main activity display in the titlebar
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+
+# Skip the code folding animation
+defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -int 0
+
 # Enable touch indicator for iOS app demo video recording 
 defaults write com.apple.iphonesimulator ShowSingleTouches 1
 
