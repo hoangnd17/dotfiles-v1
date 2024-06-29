@@ -429,6 +429,8 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
 sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
 
+#  Display Xcode  build times in the main activity display in the titlebar
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 # Enable touch indicator for iOS app demo video recording 
 defaults write com.apple.iphonesimulator ShowSingleTouches 1
 
