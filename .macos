@@ -432,6 +432,9 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 #  Display Xcode  build times in the main activity display in the titlebar
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 
+# Make Xcode's Assistant aware of your ViewModels, Views, etc
+defaults write http://com.apple.dt.Xcode IDEAdditionalCounterpartSuffixes -array-add "ViewModel" "View" "Screen"
+
 # Skip the code folding animation
 defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -int 0
 
