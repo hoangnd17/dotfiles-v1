@@ -49,6 +49,10 @@ git_current_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
+#Pods
+# Remove the Pods directory and Podfile.lock, then reinstall all pods
+alias podnuke='rm -rf Pods Podfile.lock && pod install'
+
 #mackup: https://github.com/lra/mackup
 alias backup="mackup backup"
 alias restore="mackup restore"
