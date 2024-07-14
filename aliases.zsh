@@ -39,9 +39,6 @@ alias gss="git stash save"
 alias apply="git stash apply"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
-alias xc="xed ."
-alias xflush="xcrun simctl shutdown all && xcrun simctl erase all"
-alias xclean="xcode_cleanup"
 alias gpush='git push origin $(git_current_branch)'
 alias gpull='git pull origin $(git_current_branch)'
 
@@ -59,6 +56,31 @@ alias restore="mackup restore"
 
 #xcode
 alias deeplink="xcrun simctl openurl booted"
+alias xc="xed ."
+alias xflush="xcrun simctl shutdown all && xcrun simctl erase all"
+alias xclean="xcode_cleanup"
+
+#simulator
+  # Change a particular user default value
+  # Usage: simdefaults [APP_BUNDLE_ID] [DEFAULTS_KEY] [VALUE]
+  alias simdefaults='xcrun simctl spawn booted defaults write [APP_BUNDLE_ID] [DEFAULTS_KEY] [VALUE]'
+
+  # Set location
+  # Usage: simlocation [LATITUDE] [LONGITUDE]
+  # Usage: simlocation 37.7749 -122.4194
+  alias simlocation='xcrun simctl location booted set [LATITUDE] [LONGITUDE]'
+
+  # Adjust privacy settings
+  # Usage: simprivacy [SERVICE] [ACCESS_LEVEL]
+  alias simprivacy='xcrun simctl privacy booted grant [SERVICE] [ACCESS_LEVEL]'
+
+  # Handle push notifications
+  # Usage: simpush [PAYLOAD_PATH]
+  alias simpush='xcrun simctl push booted [APP_BUNDLE_ID] [PAYLOAD_PATH]'
+
+  # Reset all user defaults for a particular app ID
+  # Usage: simresetdefaults [APP_BUNDLE_ID]
+  alias simresetdefaults='xcrun simctl spawn booted defaults delete [APP_BUNDLE_ID]'
 
 #ssh
 alias myssh="generate_ssh_key"
