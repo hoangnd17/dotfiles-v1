@@ -41,6 +41,7 @@ alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias gpush='git push origin $(git_current_branch)'
 alias gpull='git pull origin $(git_current_branch)'
+alias gremote='git branch -r'
 
 git_current_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
