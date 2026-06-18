@@ -12,7 +12,7 @@ function sshkey() {
 
     eval "$(ssh-agent -s)"
 
-    printf "Host %s.%s\n  HostName %s\n  User git\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile ~/.ssh/%s\n\n" \
+    printf "\nHost %s.%s\n HostName %s\n User git\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/%s\n" \
         "$key_name" "$host" "$host" "$key_name" | tee -a ~/.ssh/config
 
     ssh-add --apple-use-keychain ~/.ssh/$key_name
