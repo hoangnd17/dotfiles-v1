@@ -1,6 +1,6 @@
 [user]
-	name = Quang Pham
-	email = quangpn1@smartosc.com
+	name = Frank
+	email = frank@domain.com
 [core]
 	excludesfile = /Users/frankie754/.gitignore_global
 [mergetool "smerge"]
